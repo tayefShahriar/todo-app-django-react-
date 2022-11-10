@@ -8,5 +8,5 @@ from rest_framework.response import Response
 
 
 class TodoView(ModelViewSet):
-    queryset = Todo.objects.all()
+    queryset = Todo.objects.all().order_by('-id')
     serializer_class = Todoserializer
